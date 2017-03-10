@@ -4,8 +4,9 @@ Core goals:
    -> Compilation at the core of the language
    -> Fine grained incremental compilation
    -> Optimisations part of the language, not the compiler
+   -> Program validaion at compilation
 -> Expressivness:
-   -> Algorithms only need to be written twice.
+   -> Algorithms only need to be written once.
    -> Simple stuff should be concise.
 -> Speed and memory:
    -> It should be possible to write code as efficient as C
