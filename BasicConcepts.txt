@@ -1,0 +1,70 @@
+Note that since the language is WIP, we have no syntaxe yet.
+
+Kontext (K):
+A runtime Kontext only contains variables and values. (RK)
+An aggregation of variables, types and values. (K)
+
+A RTK is a RK which itself is a K.
+
+Block (B):
+A Block is a pi
+
+A Block starts in a Kontext and ends in another Kontext. (B)
+A run-time Block uses Run-time kontexts. (RB)
+
+A RTB is a RB which itelf is a B.
+
+-- TODO --
+
+Pointers?
+Reference (R):
+A reference is an alias to a variable.
+There are 2 kinds of references: those computable compile time, and those runtime.
+Only runtime references take space.
+
+-- END --
+
+Example:
+
+Consider this C / C++ function:
+
+int add(int a, int b)
+{
+  return (a + b);
+}
+
+Translated to Kontext, it would be a block, with a start Kontext of (int, int) and an end context of (int).
+
+SYNTAXE PROPOITION:
+Having a syntaxe similar to C / C++ would be good for easy understanding.
+However if a simple simplification exists, no problem.
+
+Symbols:
+
+Kontext: uses () to define, Kontext as type
+Block: uses {} to define, Block as type
+
+-- TODO --
+Reference: uses &
+-- END --
+
+something like this?
+suppose we had an existing primitive T
+
+Kontext T
+
+Block pair = (Kontext A) { (A a1, A a2) };
+
+Block anySameTypeAdd = (Kontext A) { pair(A) { a1 + a2 } };
+
+Block addT = anyTypeAdd(T); // (T a1, T a2) { a1 + a2 }
+
+// This is ofcourse a useless example.
+
+C++ equivalent:
+
+template<class T>
+T add(T a1, T a2)
+{
+  return a1 + a2;
+}
