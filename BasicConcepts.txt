@@ -4,15 +4,15 @@ Kontext (K):
 A runtime Kontext only contains variables and values. (RK)
 An aggregation of variables, types and values. (K)
 
-A RTK is a RK which itself is a K.
+A RK is a K.
 
 Block (B):
-A Block is a pi
+A Block is a series of instructions.
 
 A Block starts in a Kontext and ends in another Kontext. (B)
 A run-time Block uses Run-time kontexts. (RB)
 
-A RTB is a RB which itelf is a B.
+A RB is a B.
 
 -- TODO --
 
@@ -53,18 +53,15 @@ suppose we had an existing primitive T
 
 Kontext T
 
-Block pair = (Kontext A) { (A a1, A a2) };
-
-Block anySameTypeAdd = (Kontext A) { pair(A) { a1 + a2 } };
-
+Block anySameTypeAdd = (Kontext A) { (A a1, A a2) { a1 + a2 } };
 Block addT = anyTypeAdd(T); // (T a1, T a2) { a1 + a2 }
 
 // This is ofcourse a useless example.
 
 C++ equivalent:
 
-template<class T>
-T add(T a1, T a2)
+template<class U>
+U add(U a1, U a2)
 {
   return a1 + a2;
 }
