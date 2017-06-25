@@ -1,14 +1,14 @@
-#### Runtimes
+# Run-time
 
-### Types:
+## Types:
 
 At run rime, every variable can be treated as an expression.
 
-## Compile time types:
+# Compile-time:
 
-# Types
+## Types
 
-# Structs
+## Structs
 
 Structs are an aggregation of types. They create a Kontext of accesors.
 
@@ -21,10 +21,10 @@ struct jaj
 };
 ```
 
-# Functions
+## Functions
 
 Takes kontexts and returns Kontexts.
 
-# Kontext
+## Kontext
 
 A series of functions depending on compile time values & types.  Structs are (simple) kontexts.
