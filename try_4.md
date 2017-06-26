@@ -6,7 +6,6 @@ Different operations are possible:
   ```
   type A = int;
   ```
-  `type` is optional
 - Struct declaration
   ```
   struct B =
@@ -15,12 +14,10 @@ Different operations are possible:
     int dogs;
   };
   ```
-  `struct` is optional
 - Constant declaration
   ```
   A a = 5;
   ```
-  `A` is optional
 - Function declaration
   ```
    function a(A b)
@@ -28,7 +25,6 @@ Different operations are possible:
    function Pair(Type A)
     = return {A, A};
   ```
-  `function` is optional
   
   Note: Types, Structs and Constants can be used as functions that take no parameters
 - Lambda declaration
@@ -37,7 +33,6 @@ Different operations are possible:
     = b * c;
   lambda fiveTimes = a(5);
   ```
-  `lambda` is optional
 
 - Interface declaration (series of accessors)
   ```
@@ -49,7 +44,7 @@ Different operations are possible:
 
 - Object declaration
   ```
-  class DogTwo = Dog(2);
+  dogTwo = Dog(2);
   ```
 
 - Functor declaration (Compute an interface from other interfaces)
